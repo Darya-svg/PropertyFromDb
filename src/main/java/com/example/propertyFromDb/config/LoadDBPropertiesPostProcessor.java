@@ -23,11 +23,6 @@ public class LoadDBPropertiesPostProcessor implements EnvironmentPostProcessor {
         var password = environment.getProperty("configuration.datasource.password");
         var service = environment.getProperty("spring.application.name");
 
-        System.out.println(url);
-        System.out.println(username);
-        System.out.println(password);
-        System.out.println(service);
-
         if (!StringUtils.hasText(url)) {
             throw new RuntimeException("Database url is missed");
         }
